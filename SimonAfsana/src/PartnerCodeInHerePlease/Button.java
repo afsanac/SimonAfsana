@@ -2,6 +2,7 @@ package PartnerCodeInHerePlease;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 
 import SimonAfsana.ButtonInterfaceAfsana;
 import gui.components.Action;
@@ -15,6 +16,9 @@ public class Button extends Component implements ButtonInterfaceAfsana {
 	private double sin;
 	private Action action;
 	public boolean highlighted;
+	public static final int height = 45;
+	public static final int width = 45;
+	
 
 	public Button(int x, int y, int w, int h) {
 		super(x, y, w, h);
@@ -33,7 +37,18 @@ public class Button extends Component implements ButtonInterfaceAfsana {
 
 	@Override
 	public void update(Graphics2D g) {
-		
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		if(displayColor != null){
+			g.setColor(displayColor);
+		}else{
+			g.fillOval(0,0, width, height);
+			g.setColor(Color.black);
+			g.fillOval(0, 0, width - 1, height - 1);
+			if(highlighted){
+				g.setColor(Color.white);
+				
+			}
+		}
 	}
 
 	@Override
