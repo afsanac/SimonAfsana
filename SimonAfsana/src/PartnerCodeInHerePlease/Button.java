@@ -1,12 +1,14 @@
 package PartnerCodeInHerePlease;
 
-import java.awt.image.BufferedImage;
+import java.awt.Graphics2D;
 
 import SimonAfsana.ButtonInterfaceAfsana;
+import gui.components.Component;
 
-public class Button implements ButtonInterfaceAfsana {
+public class Button extends Component implements ButtonInterfaceAfsana {
 
-	public Button() {
+	public Button(int x, int y, int w, int h) {
+		super(x, y, w, h);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -23,43 +25,7 @@ public class Button implements ButtonInterfaceAfsana {
 	}
 
 	@Override
-	public int getHeight() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public BufferedImage getImage() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int getWidth() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getX() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getY() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public boolean isAnimated() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void update() {
+	public void update(Graphics2D g) {
 		// TODO Auto-generated method stub
 
 	}
