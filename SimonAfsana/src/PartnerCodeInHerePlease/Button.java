@@ -18,7 +18,6 @@ public class Button extends Component implements ButtonInterfaceAfsana {
 
 	public Button(int x, int y, int w, int h) {
 		super(x, y, w, h);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -28,7 +27,8 @@ public class Button extends Component implements ButtonInterfaceAfsana {
 
 	@Override
 	public boolean isHovered(int x, int y) {
-		return false;
+		
+		return x > getX() && x < getX() + getWidth() && y > getY() && y < getY() + getHeight();
 	}
 
 	@Override
