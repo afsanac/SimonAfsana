@@ -19,4 +19,6 @@ public interface ButtonInterfaceAfsana extends Clickable {
 
 	void dim();
 
+	void setName(String string);
+
 }
