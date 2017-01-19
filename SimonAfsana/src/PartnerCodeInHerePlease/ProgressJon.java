@@ -8,7 +8,7 @@ import java.awt.RenderingHints;
 import SimonAfsana.ProgressInterfaceAfsana;
 import gui.components.Component;
 
-public class Progress extends Component implements ProgressInterfaceAfsana {
+public class ProgressJon extends Component implements ProgressInterfaceAfsana {
 	
 	public static final int HEIGHT = 60;
 	public static final int WIDTH = 120;
@@ -17,7 +17,7 @@ public class Progress extends Component implements ProgressInterfaceAfsana {
 	public String round;
 	public String sequence;
 	
-	public Progress() {
+	public ProgressJon() {
 		super(85, 85, WIDTH, HEIGHT);
 	}
 
@@ -30,13 +30,13 @@ public class Progress extends Component implements ProgressInterfaceAfsana {
 			g.fillRect(0, 0, WIDTH, HEIGHT);
 			g.setColor(Color.white);
 			String gameOver = "Game Over!";
-			g.drawString(gameOver, WIDTH - fm.stringWidth(gameOver)/2, 0);
-			g.drawString(sequence,  WIDTH - fm.stringWidth(sequence)/2, 40);
+			g.drawString(gameOver, WIDTH - fm.stringWidth(gameOver), 10);
+			g.drawString(sequence,  WIDTH - fm.stringWidth(sequence), 40);
 			
 		}else{
 			if(round != null && sequence != null){
-				g.drawString(round, WIDTH - fm.stringWidth(round)/2, 20);
-				g.drawString(sequence, WIDTH - fm.stringWidth(sequence)/2, 40);
+				g.drawString(round, WIDTH - fm.stringWidth(round), 15);
+				g.drawString(sequence, WIDTH - fm.stringWidth(sequence), 40);
 			}
 		}
 

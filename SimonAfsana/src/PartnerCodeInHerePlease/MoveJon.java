@@ -3,11 +3,11 @@ package PartnerCodeInHerePlease;
 import SimonAfsana.ButtonInterfaceAfsana;
 import SimonAfsana.MoveInterfaceAfsana;
 
-public class Move implements MoveInterfaceAfsana {
+public class MoveJon implements MoveInterfaceAfsana {
 
 	private ButtonInterfaceAfsana b;
 
-	public Move(ButtonInterfaceAfsana b) {
+	public MoveJon(ButtonInterfaceAfsana b) {
 		this.b = b;
 	}
 	
